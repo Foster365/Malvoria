@@ -59,7 +59,6 @@ public class BattleOutcomesController : MonoBehaviour
     int GetRandomOutcomesValue(int max)
     {
         var value = UnityEngine.Random.Range(1, max);
-        Debug.Log("Valor random: " + value);
         return value;
     }
 
@@ -85,6 +84,5 @@ public class BattleOutcomesController : MonoBehaviour
     public void RemoveCardsFromList(string value)
     {
         bool removed = battleOutcomesList.Remove(value);
-        Debug.Log("Value removed" + removed);
     }
 }

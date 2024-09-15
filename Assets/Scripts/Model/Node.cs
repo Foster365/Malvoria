@@ -17,15 +17,21 @@ public class Node : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             isVisited = true;
-            var player = collision.gameObject.GetComponent<Player>();
+            player = collision.gameObject.GetComponent<Player>();
             HandleOxygenDecrease(player);
             StartCoroutine(WaitUntilBlockMovement(player));
-            Debug.Log("Collision w player");
             HandleCardEvent();
-            StartCoroutine(WaitUntilDisablingCard());
         }
     }
-    
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F) && player)
+        {
+            DisableCard();
+        }
+    }
+
     void HandleOxygenDecrease(Player player)
     {
         player.Oxygen--;
@@ -36,23 +42,17 @@ public class Node : MonoBehaviour
         player.IsMoving = false;
     }
 
-    IEnumerator WaitUntilDisablingCard()
-    {
-        yield return new WaitForSeconds(5);
-        DisableCard();
-    }
-
     void HandleCardEvent()
     {
-        if (eventCard != null) eventCard.SetActive(true);
+        if (eventCard) eventCard.SetActive(true);
     }
 
     public void DisableCard()
     {
-        if (eventCard != null && player != null)
+        if (eventCard && player)
         {
-            eventCard.SetActive(false);
             player.IsMoving = true;
+            eventCard.SetActive(false);
         }
     }
 }
