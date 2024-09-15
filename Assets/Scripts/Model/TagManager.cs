@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class TagManager : MonoBehaviour
 {
+    #region Outcome Types
+    public const string TOTAL_SUCCESS_TYPE = "Total_Success";
+    public const string PARTIAL_SUCCESS_TYPE = "Partial_Success";
+    public const string FAILURE_TYPE = "Failure";
+    #endregion
+
     #region Layers
     public const string GAME_NODE_LAYER = "Game_Node";
     public const string FINAL_NODE_LAYER = "Final_Game_Node";

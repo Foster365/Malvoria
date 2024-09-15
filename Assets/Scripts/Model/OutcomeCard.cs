@@ -12,5 +12,6 @@ public class OutcomeCard : MonoBehaviour
     {
         controller.DecreaseCardsAmount(cardType);
         controller.RemoveCardsFromList(cardType);
+        controller.DisableCard(this.transform.parent.gameObject);
     }
 }

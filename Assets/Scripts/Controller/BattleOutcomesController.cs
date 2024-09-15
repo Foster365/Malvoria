@@ -11,16 +11,22 @@ public class BattleOutcomesController : MonoBehaviour
     [SerializeField] TextMeshProUGUI totalSuccessCountImage, partialSuccessCountImage, failureCountImage;
     int totalSuccessCount, partialSuccessCount, failureCount;
 
+    Player playerReference;
+
     List<string> battleOutcomesList = new List<string>();
 
+    #region Encapsulated variables
     public List<string> BattleOutcomesList { get => battleOutcomesList; set => battleOutcomesList = value; }
     public TextMeshProUGUI TotalSuccessCountImage { get => totalSuccessCountImage; set => totalSuccessCountImage = value; }
     public TextMeshProUGUI PartialSuccessCountImage { get => partialSuccessCountImage; set => partialSuccessCountImage = value; }
     public TextMeshProUGUI FailureCountImage { get => failureCountImage; set => failureCountImage = value; }
+    public Player PlayerReference { get => playerReference; set => playerReference = value; }
+    #endregion
 
     private void Start()
     {
         SortBattleCards();
+        playerReference = GameObject.FindWithTag(TagManager.PLAYER_TAG).GetComponent<Player>();
     }
 
     public void SortBattleCards()
@@ -38,13 +44,24 @@ public class BattleOutcomesController : MonoBehaviour
             battleOutcomesList.Add(typeOfCard);
         }
     }
+    public void HandleCardEvent(GameObject eventCard)
+    {
+        if (eventCard) eventCard.SetActive(true);
+    }
+
+    int GetRandomOutcomesValue(int max)
+    {
+        var value = UnityEngine.Random.Range(1, max);
+        return value;
+    }
+
     void HandleOutcomesCountUI(string cardType, int amount)
     {
         switch (cardType)
         {
             case "Total_Success":
                 GameManager.Instance.TotalSuccessCount = amount;
-                totalSuccessCountImage.text = amount.ToString(); 
+                totalSuccessCountImage.text = amount.ToString();
                 break;
             case "Partial_Success":
                 GameManager.Instance.PartialSuccessCount = amount;
@@ -52,14 +69,9 @@ public class BattleOutcomesController : MonoBehaviour
                 break;
             case "Failure":
                 GameManager.Instance.FailureCount = amount;
-                failureCountImage.text = amount.ToString(); 
+                failureCountImage.text = amount.ToString();
                 break;
         }
-    }
-    int GetRandomOutcomesValue(int max)
-    {
-        var value = UnityEngine.Random.Range(1, max);
-        return value;
     }
 
     public void DecreaseCardsAmount(string cardType)
@@ -83,6 +95,15 @@ public class BattleOutcomesController : MonoBehaviour
 
     public void RemoveCardsFromList(string value)
     {
-        bool removed = battleOutcomesList.Remove(value);
+        battleOutcomesList.Remove(value);
+    }
+
+    public void DisableCard(GameObject eventCard)
+    {
+        if (eventCard && playerReference)
+        {
+            playerReference.IsMoving = true;
+            eventCard.gameObject.SetActive(false);
+        }
     }
 }

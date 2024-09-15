@@ -7,6 +7,7 @@ public class Node : MonoBehaviour
 {
 
     [SerializeField] GameObject eventCard;
+    BattleOutcomesController battleOutcomesController;
     Player player;
     bool isVisited;
 
@@ -16,19 +17,13 @@ public class Node : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+
             isVisited = true;
             player = collision.gameObject.GetComponent<Player>();
             HandleOxygenDecrease(player);
             StartCoroutine(WaitUntilBlockMovement(player));
-            HandleCardEvent();
-        }
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F) && player)
-        {
-            DisableCard();
+            battleOutcomesController = GameObject.FindWithTag(TagManager.BATTLE_OUTCOMES_CONTROLLER_TAG).GetComponent<BattleOutcomesController>();
+            if(battleOutcomesController)battleOutcomesController.HandleCardEvent(eventCard);
         }
     }
 
@@ -42,17 +37,4 @@ public class Node : MonoBehaviour
         player.IsMoving = false;
     }
 
-    void HandleCardEvent()
-    {
-        if (eventCard) eventCard.SetActive(true);
-    }
-
-    public void DisableCard()
-    {
-        if (eventCard && player)
-        {
-            player.IsMoving = true;
-            eventCard.SetActive(false);
-        }
-    }
 }

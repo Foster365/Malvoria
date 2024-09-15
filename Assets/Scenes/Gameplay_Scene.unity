@@ -520,6 +520,7 @@ GameObject:
   - component: {fileID: 190929698}
   - component: {fileID: 190929700}
   - component: {fileID: 190929699}
+  - component: {fileID: 190929701}
   m_Layer: 5
   m_Name: Moderate Success Card Option
   m_TagString: Untagged
@@ -591,7 +592,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 918065229}
+        m_TargetAssemblyTypeName: OutcomeCard, Assembly-CSharp
+        m_MethodName: UseCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &190929700
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -600,6 +613,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190929697}
   m_CullTransparentMesh: 1
+--- !u!114 &190929701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190929697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad913e098a52c044c87ba0f8bde559a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardType: Partial_Success
+  controller: {fileID: 563157522}
 --- !u!1 &194722866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,6 +2441,7 @@ GameObject:
   - component: {fileID: 918065226}
   - component: {fileID: 918065228}
   - component: {fileID: 918065227}
+  - component: {fileID: 918065229}
   m_Layer: 5
   m_Name: Total Success Card Option
   m_TagString: Untagged
@@ -2485,7 +2513,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 918065229}
+        m_TargetAssemblyTypeName: OutcomeCard, Assembly-CSharp
+        m_MethodName: UseCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &918065228
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2494,6 +2534,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918065225}
   m_CullTransparentMesh: 1
+--- !u!114 &918065229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918065225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad913e098a52c044c87ba0f8bde559a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardType: Total_Success
+  controller: {fileID: 563157522}
 --- !u!1 &996436390
 GameObject:
   m_ObjectHideFlags: 0
@@ -5273,6 +5327,7 @@ GameObject:
   - component: {fileID: 2001043306}
   - component: {fileID: 2001043308}
   - component: {fileID: 2001043307}
+  - component: {fileID: 2001043309}
   m_Layer: 5
   m_Name: Failure Card Option
   m_TagString: Untagged
@@ -5344,7 +5399,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 918065229}
+        m_TargetAssemblyTypeName: OutcomeCard, Assembly-CSharp
+        m_MethodName: UseCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &2001043308
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5353,6 +5420,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001043305}
   m_CullTransparentMesh: 1
+--- !u!114 &2001043309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001043305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad913e098a52c044c87ba0f8bde559a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardType: Failure
+  controller: {fileID: 563157522}
 --- !u!1 &2001308945
 GameObject:
   m_ObjectHideFlags: 0
