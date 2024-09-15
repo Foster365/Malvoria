@@ -25,15 +25,14 @@ public class BattleOutcomesController : MonoBehaviour
 
     public void SortBattleCards()
     {
-        SetCardsToDictionary("Total_Success", 3);
-        SetCardsToDictionary("Partial_Success", 4);
-        SetCardsToDictionary("Failure", 3);
+        SetCardsToList("Total_Success", GetRandomOutcomesValue(3));
+        SetCardsToList("Partial_Success", GetRandomOutcomesValue(4));
+        SetCardsToList("Failure", GetRandomOutcomesValue(3));
     }
 
-    void SetCardsToDictionary(string typeOfCard, int maxAmountOfCards)
+    void SetCardsToList(string typeOfCard, int amountOfCards)
     {
-        var amountOfCards = GetRandomOutcomesValue(maxAmountOfCards);
-        HandleOutcomesCountUI(typeOfCard, maxAmountOfCards);
+        HandleOutcomesCountUI(typeOfCard, amountOfCards);
         for (int i = 0; i < amountOfCards; i++)
         {
             battleOutcomesList.Add(typeOfCard);
@@ -44,39 +43,48 @@ public class BattleOutcomesController : MonoBehaviour
         switch (cardType)
         {
             case "Total_Success":
-                totalSuccessCountImage.text = amount.ToString(); 
                 GameManager.Instance.TotalSuccessCount = amount;
+                totalSuccessCountImage.text = amount.ToString(); 
                 break;
             case "Partial_Success":
-                partialSuccessCountImage.text = amount.ToString();
                 GameManager.Instance.PartialSuccessCount = amount;
+                partialSuccessCountImage.text = amount.ToString();
                 break;
             case "Failure":
-                failureCountImage.text = amount.ToString(); 
                 GameManager.Instance.FailureCount = amount;
+                failureCountImage.text = amount.ToString(); 
                 break;
         }
     }
     int GetRandomOutcomesValue(int max)
     {
-        return UnityEngine.Random.Range(1, max);
+        var value = UnityEngine.Random.Range(1, max);
+        Debug.Log("Valor random: " + value);
+        return value;
+    }
+
+    public void DecreaseCardsAmount(string cardType)
+    {
+        switch (cardType)
+        {
+            case "Total_Success":
+                GameManager.Instance.TotalSuccessCount--;
+                HandleOutcomesCountUI(cardType, GameManager.Instance.TotalSuccessCount);
+                break;
+            case "Partial_Success":
+                GameManager.Instance.PartialSuccessCount--;
+                HandleOutcomesCountUI(cardType, GameManager.Instance.PartialSuccessCount);
+                break;
+            case "Failure":
+                GameManager.Instance.FailureCount--;
+                HandleOutcomesCountUI(cardType, GameManager.Instance.FailureCount);
+                break;
+        }
     }
 
     public void RemoveCardsFromList(string value)
     {
-        foreach (var c in battleOutcomesList)
-        {
-            if (c == value)
-            {
-                Debug.Log("valor es: " + c);
-                break;
-            }
-        }
-        //for (int i = 0;i < battleOutcomesList.Count;i++) {
-        //    if (battleOutcomesList[i] == value)
-        //    {
-        //        battleOutcomesList.RemoveAt(i);
-        //    }
-        //}
+        bool removed = battleOutcomesList.Remove(value);
+        Debug.Log("Value removed" + removed);
     }
 }
