@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Oxygen_Level_UI
+  - Health_Level_UI
+  - Total_Success_Cards_Count
+  - Partial_Success_Cards_Count
+  - Failure_Cards_Count
+  - Battle_Outcomes_Controller
   layers:
   - Default
   - TransparentFX
@@ -11,8 +17,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Game_Node
+  - Final_Game_Node
   - 
   - 
   - 
