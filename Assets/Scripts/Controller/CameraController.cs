@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour
     {
         if (target == null) return;
 
-        transform.position = new Vector3(target.position.x , target.position.y + lookAhead, transform.position.z);
+        transform.position = new Vector3(target.position.x , target.position.y, transform.position.z);
         lookAheadDistance = Mathf.Lerp(lookAhead, (lookAheadDistance * target.localScale.y), Time.deltaTime * smoothSpeed);
     }
 }

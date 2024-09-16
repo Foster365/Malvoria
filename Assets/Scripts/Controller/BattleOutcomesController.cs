@@ -29,6 +29,13 @@ public class BattleOutcomesController : MonoBehaviour
         playerReference = GameObject.FindWithTag(TagManager.PLAYER_TAG).GetComponent<Player>();
     }
 
+    private void Update()
+    {
+
+        totalSuccessCountImage.text = GameManager.Instance.TotalSuccessCount.ToString();
+        partialSuccessCountImage.text = GameManager.Instance.PartialSuccessCount.ToString();
+        failureCountImage.text = GameManager.Instance.FailureCount.ToString();
+    }
     public void SortBattleCards()
     {
         SetCardsToList("Total_Success", GetRandomOutcomesValue(3));
@@ -47,6 +54,17 @@ public class BattleOutcomesController : MonoBehaviour
     public void HandleCardEvent(GameObject eventCard)
     {
         if (eventCard) eventCard.SetActive(true);
+    }
+
+    public void HandleDecisionModifiers(int oxygenModifier, int healthModifier, int totalSuccessModifier, int partialSuccessModifier, int failureModifier)
+    {
+        playerReference.Oxygen += oxygenModifier;
+        playerReference.Health += healthModifier;
+        GameManager.Instance.TotalSuccessCount += totalSuccessModifier;
+        GameManager.Instance.PartialSuccessCount += partialSuccessModifier;
+        GameManager.Instance.FailureCount += failureModifier;
+
+        Debug.Log("Total success count: " + GameManager.Instance.TotalSuccessCount);
     }
 
     int GetRandomOutcomesValue(int max)
@@ -76,6 +94,7 @@ public class BattleOutcomesController : MonoBehaviour
 
     public void DecreaseCardsAmount(string cardType)
     {
+        Debug.Log("Tipo de carta: " + cardType);
         switch (cardType)
         {
             case "Total_Success":

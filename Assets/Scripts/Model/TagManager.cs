@@ -22,7 +22,6 @@ public class TagManager : MonoBehaviour
     public const string OXYGEN_LEVEL_UI_TAG = "Oxygen_Level_UI";
     public const string HEALTH_LEVEL_UI_TAG = "Health_Level_UI";
     public const string PARTIAL_SUCCESS_CARDS_COUNT_TAG = "Partial_Success_Cards_Count";
-    public const string MODERATE_SUCCESS_CARDS_COUNT_TAG = "Moderate_Success_Cards_Count";
     public const string FAILURE_CARDS_COUNT_TAG = "Failure_Cards_Count";
     public const string BATTLE_OUTCOMES_CONTROLLER_TAG = "Battle_Outcomes_Controller";
     
