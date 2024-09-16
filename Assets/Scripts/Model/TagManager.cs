@@ -31,6 +31,7 @@ public class TagManager : MonoBehaviour
     #region Scenes
     public const string MAIN_MENU_SCENE = "Main_Menu_Scene";
     public const string WIN_SCENE = "Win_Scene";
+    public const string CREDITS_SCENE = "Credits_Scene";
     public const string GAME_OVER_SCENE = "Game_Over_Scene";
     #endregion
 }

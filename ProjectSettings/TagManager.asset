@@ -10,6 +10,7 @@ TagManager:
   - Partial_Success_Cards_Count
   - Failure_Cards_Count
   - Battle_Outcomes_Controller
+  - Final_Node
   layers:
   - Default
   - TransparentFX

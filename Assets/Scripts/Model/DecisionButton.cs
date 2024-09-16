@@ -9,16 +9,16 @@ public class DecisionButton : MonoBehaviour
     [SerializeField] int oxygenModifier, healthModifier;
     [SerializeField] int totalSuccessModifier, partialSuccessModifier, failureModifier;
 
-    private void Awake()
+    private void Start()
     {
         VerifyValuesBeforeUse();
     }
 
     public void UseCard()
     {
+        controller.HandleDecisionModifiers(oxygenModifier, healthModifier, totalSuccessModifier, partialSuccessModifier, failureModifier);
         controller.DecreaseCardsAmount(cardType);
         controller.RemoveCardsFromList(cardType);
-        controller.HandleDecisionModifiers(oxygenModifier, healthModifier, totalSuccessModifier, partialSuccessModifier, failureModifier);
         controller.DisableCard(this.transform.parent.gameObject);
     }
 

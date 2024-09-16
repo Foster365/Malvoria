@@ -8,7 +8,6 @@ public class Node : MonoBehaviour
 
     [SerializeField] GameObject eventCard;
     BattleOutcomesController battleOutcomesController;
-    Player player;
     bool isVisited;
 
     public bool IsVisited { get => isVisited; set => isVisited = value; }
@@ -19,9 +18,8 @@ public class Node : MonoBehaviour
         {
 
             isVisited = true;
-            player = collision.gameObject.GetComponent<Player>();
-            HandleOxygenDecrease(player);
-            StartCoroutine(WaitUntilBlockMovement(player));
+            HandleOxygenDecrease(GameManager.Instance.Player);
+            StartCoroutine(WaitUntilBlockMovement(GameManager.Instance.Player));
             battleOutcomesController = GameObject.FindWithTag(TagManager.BATTLE_OUTCOMES_CONTROLLER_TAG).GetComponent<BattleOutcomesController>();
             if(battleOutcomesController)battleOutcomesController.HandleCardEvent(eventCard);
         }

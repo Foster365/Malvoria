@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public int TotalSuccessCount { get => totalSuccessCount; set => totalSuccessCount = value; }
     public int PartialSuccessCount { get => partialSuccessCount; set => partialSuccessCount = value; }
     public int FailureCount { get => failureCount; set => failureCount = value; }
+    public Player Player { get => player; set => player = value; }
 
     private void Awake()
     {
@@ -46,7 +47,7 @@ public class GameManager : MonoBehaviour
 
     void CheckWin()
     {
-        if (isWin) SceneManager.LoadScene(TagManager.WIN_SCENE);
+        if (isWin) SceneManager.LoadScene(TagManager.CREDITS_SCENE);
     }
 
     void CheckDefeat()
