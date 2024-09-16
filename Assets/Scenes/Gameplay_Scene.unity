@@ -2270,7 +2270,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.0123396795, y: 0.024542274}
   m_AnchorMax: {x: 0.11400001, y: 0.09054228}
-  m_AnchoredPosition: {x: -1.5001221, y: -6.499939}
+  m_AnchoredPosition: {x: -1.5001221, y: -6.499878}
   m_SizeDelta: {x: -3, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &398961572
@@ -5524,7 +5524,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Fallo: La voraz criatura te toma por sorpresa en el peor momento. Si tienes
-    suerte, saldr\xE1s con vida de esta. -5 HP"
+    suerte, saldr\xE1s con vida de esta. -10HP"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14285,7 +14285,7 @@ MonoBehaviour:
   cardType: Failure
   controller: {fileID: 563157522}
   oxygenModifier: 0
-  healthModifier: -5
+  healthModifier: -10
   totalSuccessModifier: 0
   partialSuccessModifier: 0
   failureModifier: 0
