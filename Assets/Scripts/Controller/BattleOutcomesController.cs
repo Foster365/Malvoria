@@ -57,11 +57,11 @@ public class BattleOutcomesController : MonoBehaviour
 
     public void HandleDecisionModifiers(int oxygenModifier, int healthModifier, int totalSuccessModifier, int partialSuccessModifier, int failureModifier)
     {
-        ValueModifierHandler(playerReference.Oxygen, oxygenModifier);
-        ValueModifierHandler(playerReference.Health, healthModifier);
-        ValueModifierHandler(GameManager.Instance.TotalSuccessCount,totalSuccessModifier);
-        ValueModifierHandler(GameManager.Instance.PartialSuccessCount, partialSuccessModifier);
-        ValueModifierHandler(GameManager.Instance.FailureCount, failureModifier);
+        playerReference.Oxygen+=oxygenModifier;
+        playerReference.Health+=healthModifier;
+        if (GameManager.Instance.TotalSuccessCount > 0) totalSuccessCount += totalSuccessModifier;
+        if (GameManager.Instance.PartialSuccessCount > 0) partialSuccessCount += partialSuccessModifier;
+        if (GameManager.Instance.FailureCount > 0) failureCount += failureModifier;
 
         Debug.Log("Total success count: " + GameManager.Instance.TotalSuccessCount);
     }

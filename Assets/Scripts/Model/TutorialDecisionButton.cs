@@ -26,9 +26,9 @@ public class TutorialDecisionButton : MonoBehaviour
     IEnumerator WaitToDisableAndRestore(string type)
     {
         yield return new WaitForSeconds(2);
+        transform.parent.gameObject.SetActive(false);
         RestoreInitialDecisionCount(type);
         GameManager.Instance.Player.IsMoving = true;
-        transform.parent.gameObject.SetActive(false);
     }
     void RestoreInitialDecisionCount(string type)
     {
