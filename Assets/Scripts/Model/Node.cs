@@ -19,7 +19,7 @@ public class Node : MonoBehaviour
 
             isVisited = true;
             HandleOxygenDecrease(GameManager.Instance.Player);
-            StartCoroutine(WaitUntilBlockMovement(GameManager.Instance.Player));
+            GameManager.Instance.Player.IsMoving = false;
             battleOutcomesController = GameObject.FindWithTag(TagManager.BATTLE_OUTCOMES_CONTROLLER_TAG).GetComponent<BattleOutcomesController>();
             if(battleOutcomesController)battleOutcomesController.HandleCardEvent(eventCard);
         }
@@ -27,12 +27,7 @@ public class Node : MonoBehaviour
 
     void HandleOxygenDecrease(Player player)
     {
-        player.Oxygen--;
-    }
-    IEnumerator WaitUntilBlockMovement(Player player)
-    {
-        yield return new WaitForSeconds(1);
-        player.IsMoving = false;
+        if(gameObject.tag != TagManager.PLAYER_INTRODUCTION_NODE_TAG)player.Oxygen--;
     }
 
 }

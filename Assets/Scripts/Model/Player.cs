@@ -29,8 +29,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        
-        if(isMoving)CheckInputs();   
+        if(IsMoving)CheckInputs();   
     }
 
     void CheckInputs()

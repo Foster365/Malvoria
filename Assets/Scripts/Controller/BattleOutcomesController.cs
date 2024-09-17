@@ -31,7 +31,6 @@ public class BattleOutcomesController : MonoBehaviour
 
     private void Update()
     {
-
         totalSuccessCountImage.text = GameManager.Instance.TotalSuccessCount.ToString();
         partialSuccessCountImage.text = GameManager.Instance.PartialSuccessCount.ToString();
         failureCountImage.text = GameManager.Instance.FailureCount.ToString();
@@ -58,13 +57,18 @@ public class BattleOutcomesController : MonoBehaviour
 
     public void HandleDecisionModifiers(int oxygenModifier, int healthModifier, int totalSuccessModifier, int partialSuccessModifier, int failureModifier)
     {
-        playerReference.Oxygen += oxygenModifier;
-        playerReference.Health += healthModifier;
-        GameManager.Instance.TotalSuccessCount += totalSuccessModifier;
-        GameManager.Instance.PartialSuccessCount += partialSuccessModifier;
-        GameManager.Instance.FailureCount += failureModifier;
+        ValueModifierHandler(playerReference.Oxygen, oxygenModifier);
+        ValueModifierHandler(playerReference.Health, healthModifier);
+        ValueModifierHandler(GameManager.Instance.TotalSuccessCount,totalSuccessModifier);
+        ValueModifierHandler(GameManager.Instance.PartialSuccessCount, partialSuccessModifier);
+        ValueModifierHandler(GameManager.Instance.FailureCount, failureModifier);
 
         Debug.Log("Total success count: " + GameManager.Instance.TotalSuccessCount);
+    }
+
+    void ValueModifierHandler(int value, int modifier)
+    {
+        if (value > 0) value += modifier;
     }
 
     int GetRandomOutcomesValue(int max)

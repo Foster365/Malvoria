@@ -24,7 +24,8 @@ public class TagManager : MonoBehaviour
     public const string PARTIAL_SUCCESS_CARDS_COUNT_TAG = "Partial_Success_Cards_Count";
     public const string FAILURE_CARDS_COUNT_TAG = "Failure_Cards_Count";
     public const string BATTLE_OUTCOMES_CONTROLLER_TAG = "Battle_Outcomes_Controller";
-    
+    public const string PLAYER_INTRODUCTION_NODE_TAG = "Player_Introduction_Node";
+
 
     #endregion
 

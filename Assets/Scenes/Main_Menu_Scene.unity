@@ -551,7 +551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f54142772c2fc594b8eb2e79ac1ec4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Main_Menu_Scene
+  scene: 
 --- !u!114 &570314718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,7 +598,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 570314717}
         m_TargetAssemblyTypeName: SceneManagementButton, Assembly-CSharp
-        m_MethodName: HandleScene
+        m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -699,7 +699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f54142772c2fc594b8eb2e79ac1ec4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Main_Menu_Scene
+  scene: Credits_Scene
 --- !u!114 &617789261
 MonoBehaviour:
   m_ObjectHideFlags: 0
