@@ -22,7 +22,7 @@ public class Node : MonoBehaviour
             GameManager.Instance.Player.IsMoving = false;
             battleOutcomesController = GameObject.FindWithTag(TagManager.BATTLE_OUTCOMES_CONTROLLER_TAG).GetComponent<BattleOutcomesController>();
             if(battleOutcomesController && eventCard)battleOutcomesController.HandleCardEvent(eventCard);
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            gameObject.GetComponent<SpriteRenderer>().color = Color.gray;
         }
     }
 
