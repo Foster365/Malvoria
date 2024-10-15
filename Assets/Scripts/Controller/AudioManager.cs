@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        //PlayMusic("Game_Main_OST");
+        PlayMusic("Game_Background_Music");
     }
 
     public void PlayMusic(string name)
