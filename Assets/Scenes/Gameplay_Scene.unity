@@ -3199,8 +3199,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279834906
-  m_fontColor: {r: 0.103773594, g: 0.09838911, b: 0.09838911, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3217,13 +3217,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 71.25
-  m_fontSizeBase: 20
+  m_fontSize: 30
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 2
+  m_fontSizeMax: 30
+  m_fontStyle: 19
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -8688,8 +8688,8 @@ RectTransform:
   m_Father: {fileID: 1254101961}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.057157394, y: 0.1028913}
-  m_AnchorMax: {x: 0.93600005, y: 0.20400001}
+  m_AnchorMin: {x: 0.11389986, y: 0.042460743}
+  m_AnchorMax: {x: 0.8786971, y: 0.12373037}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8716,7 +8716,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 0.6117608, g: 0.5367569, b: 0.6981132, a: 1}
+    m_PressedColor: {r: 0.30600902, g: 0.07329121, b: 0.5754717, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
     m_ColorMultiplier: 1
@@ -8733,7 +8733,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 586516154}
+  m_TargetGraphic: {fileID: 115679651}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -8762,7 +8762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
+  m_Color: {r: 0.38416547, g: 0.754717, b: 0.33819866, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13632,9 +13632,10 @@ GameObject:
   m_Component:
   - component: {fileID: 859832347}
   - component: {fileID: 859832346}
+  - component: {fileID: 859832348}
   m_Layer: 6
   m_Name: Player Initial Node
-  m_TagString: Untagged
+  m_TagString: Player_Introduction_Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13706,6 +13707,19 @@ Transform:
   m_Father: {fileID: 996436391}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &859832348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859832345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea5e05e50ab0a5468df0f8245e2597c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventCard: {fileID: 0}
 --- !u!1 &860332180
 GameObject:
   m_ObjectHideFlags: 0

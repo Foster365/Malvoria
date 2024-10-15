@@ -21,7 +21,8 @@ public class Node : MonoBehaviour
             HandleOxygenDecrease(GameManager.Instance.Player);
             GameManager.Instance.Player.IsMoving = false;
             battleOutcomesController = GameObject.FindWithTag(TagManager.BATTLE_OUTCOMES_CONTROLLER_TAG).GetComponent<BattleOutcomesController>();
-            if(battleOutcomesController)battleOutcomesController.HandleCardEvent(eventCard);
+            if(battleOutcomesController && eventCard)battleOutcomesController.HandleCardEvent(eventCard);
+            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         }
     }
 
