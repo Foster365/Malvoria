@@ -12,11 +12,11 @@ public class SimpleButtonHandler : MonoBehaviour
 
     public void HoverSound()
     {
-        AudioManager.instance.PlaySFX("Button_Hover");
+        if(AudioManager.instance)AudioManager.instance.PlaySFX("Button_Hover");
     }
 
     public void ClickSound()
     {
-        AudioManager.instance.PlaySFX("Button_Click");
+        if(AudioManager.instance)AudioManager.instance.PlaySFX("Button_Click");
     }
 }
