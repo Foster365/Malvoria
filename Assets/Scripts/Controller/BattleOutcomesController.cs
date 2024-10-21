@@ -31,6 +31,9 @@ public class BattleOutcomesController : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log("Total Success Count UI: " +  totalSuccessCountImage.text);
+        Debug.Log("Partial Success Count UI: " +  partialSuccessCountImage.text);
+        Debug.Log("Failure Count UI: " +  failureCountImage.text);
         totalSuccessCountImage.text = GameManager.Instance.TotalSuccessCount.ToString();
         partialSuccessCountImage.text = GameManager.Instance.PartialSuccessCount.ToString();
         failureCountImage.text = GameManager.Instance.FailureCount.ToString();
@@ -44,11 +47,11 @@ public class BattleOutcomesController : MonoBehaviour
 
     void SetCardsToList(string typeOfCard, int amountOfCards)
     {
-        HandleOutcomesCountUI(typeOfCard, amountOfCards);
         for (int i = 0; i < amountOfCards; i++)
         {
             battleOutcomesList.Add(typeOfCard);
         }
+        HandleOutcomesCountUI(typeOfCard, amountOfCards);
     }
     public void HandleCardEvent(GameObject eventCard)
     {
@@ -98,20 +101,16 @@ public class BattleOutcomesController : MonoBehaviour
 
     public void DecreaseCardsAmount(string cardType)
     {
-        Debug.Log("Tipo de carta: " + cardType);
         switch (cardType)
         {
             case "Total_Success":
-                GameManager.Instance.TotalSuccessCount--;
-                HandleOutcomesCountUI(cardType, GameManager.Instance.TotalSuccessCount);
+                if (GameManager.Instance.TotalSuccessCount >= 0) GameManager.Instance.TotalSuccessCount--;
                 break;
             case "Partial_Success":
-                GameManager.Instance.PartialSuccessCount--;
-                HandleOutcomesCountUI(cardType, GameManager.Instance.PartialSuccessCount);
+                if (GameManager.Instance.PartialSuccessCount >= 0) GameManager.Instance.PartialSuccessCount--;
                 break;
             case "Failure":
-                GameManager.Instance.FailureCount--;
-                HandleOutcomesCountUI(cardType, GameManager.Instance.FailureCount);
+                if(GameManager.Instance.FailureCount >= 0 )GameManager.Instance.FailureCount--;
                 break;
         }
     }
