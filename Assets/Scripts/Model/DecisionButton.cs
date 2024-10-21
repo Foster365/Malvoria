@@ -24,32 +24,21 @@ public class DecisionButton : MonoBehaviour
 
     bool VerifyValuesBeforeUse()
     {
-        if (cardType == "Total_Success" && GameManager.Instance.TotalSuccessCount <= 0)
+        if (cardType == "Total_Success" && GameManager.Instance.TotalSuccessCount == 0)
         {
             gameObject.GetComponent<Button>().interactable = false;
             return true;
         }
-        if (cardType == "Partial_Success" && GameManager.Instance.PartialSuccessCount <= 0)
+        if (cardType == "Partial_Success" && GameManager.Instance.PartialSuccessCount == 0)
         {
             gameObject.GetComponent<Button>().interactable = false;
             return true;
         }
-        if (cardType == "Failure" && GameManager.Instance.FailureCount <= 0)
+        if (cardType == "Failure" && GameManager.Instance.FailureCount == 0)
         {
             gameObject.GetComponent<Button>().interactable = false;
             return true;
         }
         else return false;
     }
-
-    public void HoverSound()
-    {
-        if(AudioManager.instance)AudioManager.instance.PlaySFX("Button_Hover");
-    }
-
-    public void ClickSound()
-    {
-        if(AudioManager.instance)AudioManager.instance.PlaySFX("Button_Click");
-    }
-
 }

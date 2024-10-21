@@ -43,7 +43,6 @@ public class Player : MonoBehaviour
             {
                 target = hit.collider.transform.position;
                 target.z = transform.position.z;
-
             }
 
         }

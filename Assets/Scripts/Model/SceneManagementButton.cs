@@ -18,14 +18,4 @@ public class SceneManagementButton : MonoBehaviour
         Application.Quit();
     }
 
-    public void HoverSound()
-    {
-        if(AudioManager.instance)AudioManager.instance.PlaySFX("Button_Hover");
-    }
-
-    public void ClickSound()
-    {
-        if(AudioManager.instance)AudioManager.instance.PlaySFX("Button_Click");
-    }
-
 }

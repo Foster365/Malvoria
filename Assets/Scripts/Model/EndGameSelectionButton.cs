@@ -8,15 +8,4 @@ public class EndGameSelectionButton : MonoBehaviour
     {
         GameManager.Instance.IsWin = true;
     }
-
-    public void HoverSound()
-    {
-        AudioManager.instance.PlaySFX("Button_Hover");
-    }
-
-    public void ClickSound()
-    {
-        AudioManager.instance.PlaySFX("Button_Click");
-    }
-
 }
