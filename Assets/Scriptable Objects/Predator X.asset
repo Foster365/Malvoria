@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5c629b775e0ee49a8da34a0c8b873b, type: 3}
+  m_Name: Predator X
+  m_EditorClassIdentifier: 
+  cardTitle: Depredador X
+  cardDescryption: "Te encuentras con un dep\xF3sito abandonado, una extra\xF1a visi\xF3n
+    en este extra\xF1o mundo. Crees que podr\xEDas encontrar provisiones o alguna
+    forma de comunicarte, pero parece que algo m\xE1s ha encontrado este lugar primero,
+    y ahora sabe de tu presencia."
+  cardImage: {fileID: 21300000, guid: 26d6d4b256b1c6a4db740d0993e940f8, type: 3}
+  totalSuccessText: "Aprovechando un momento de vulnerabilidad de la criatura le
+    asestas un golpe decisivo que la hace huir. Est\xE1s a salvo. Por ahora."
+  partialSuccessText: Los embates de la criatura son incansables, ruegas por encontrar
+    una oportunidad para perderle el rastro.
+  failureText: "La voraz criatura te toma por sorpresa en el peor momento. Si tienes
+    suerte, saldr\xE1s con vida de esta."
+  totalSuccessOutcomeText: Descarta 1 fallo
+  partialSuccessOutcomeText: -3 HP
+  failureOutcomeText: -7 HP
