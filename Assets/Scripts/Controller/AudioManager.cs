@@ -56,6 +56,21 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public bool GetMusic(string name)
+    {
+        Sound s = Array.Find(musicSounds, x => x.Name == name);
+
+        if (s == null) return false;
+        else return true;
+    }
+
+    public bool GetSFX(string name)
+    {
+        Sound s = Array.Find(sfxSounds, x => x.Name == name);
+
+        if (s == null) return false;
+        else return true;
+    }
     public void ToggleMusic()
     {
         musicSource.mute = !musicSource.mute;

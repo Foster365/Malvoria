@@ -11,12 +11,12 @@ public class EndGameSelectionButton : MonoBehaviour
 
     public void HoverSound()
     {
-        AudioManager.instance.PlaySFX("Button_Hover");
+        if(AudioManager.instance.GetSFX("Button_Hover")) AudioManager.instance.PlaySFX("Button_Hover");
     }
 
     public void ClickSound()
     {
-        AudioManager.instance.PlaySFX("Button_Click");
+        if(AudioManager.instance.GetSFX("Button_Click")) AudioManager.instance.PlaySFX("Button_Click");
     }
 
 }

@@ -20,12 +20,12 @@ public class SceneManagementButton : MonoBehaviour
 
     public void HoverSound()
     {
-        if(AudioManager.instance)AudioManager.instance.PlaySFX("Button_Hover");
+        if(AudioManager.instance && AudioManager.instance.GetSFX("Button_Hover"))AudioManager.instance.PlaySFX("Button_Hover");
     }
 
     public void ClickSound()
     {
-        if(AudioManager.instance)AudioManager.instance.PlaySFX("Button_Click");
+        if(AudioManager.instance && AudioManager.instance.GetSFX("Button_Click"))AudioManager.instance.PlaySFX("Button_Click");
     }
 
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class TagManager : MonoBehaviour
 {
+
     #region Outcome Types
     public const string TOTAL_SUCCESS_TYPE = "Total_Success";
     public const string PARTIAL_SUCCESS_TYPE = "Partial_Success";
@@ -25,7 +26,6 @@ public class TagManager : MonoBehaviour
     public const string FAILURE_CARDS_COUNT_TAG = "Failure_Cards_Count";
     public const string BATTLE_OUTCOMES_CONTROLLER_TAG = "Battle_Outcomes_Controller";
     public const string PLAYER_INTRODUCTION_NODE_TAG = "Player_Introduction_Node";
-
 
     #endregion
 
