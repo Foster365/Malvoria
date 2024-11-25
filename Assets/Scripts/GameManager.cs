@@ -7,9 +7,10 @@ public class GameManager : MonoBehaviour
 {
     static GameManager instance;
     Player player;
-    bool isGameOver, isWin;
+    bool isGameOver, isWin, isWinUnderCriticalConditions;
     int totalSuccessCount, partialSuccessCount, failureCount;
     BattleOutcomesController battleOutcomesController;
+    int exploredNodesCount;
 
     public static GameManager Instance
     {
@@ -21,10 +22,12 @@ public class GameManager : MonoBehaviour
 
     public bool IsGameOver { get => isGameOver; set => isGameOver = value; }
     public bool IsWin { get => isWin; set => isWin = value; }
+    public bool IsWinUnderCriticalConditions { get => isWinUnderCriticalConditions; set => isWinUnderCriticalConditions = value; }
     public int TotalSuccessCount { get => totalSuccessCount; set => totalSuccessCount = value; }
     public int PartialSuccessCount { get => partialSuccessCount; set => partialSuccessCount = value; }
     public int FailureCount { get => failureCount; set => failureCount = value; }
     public Player Player { get => player; set => player = value; }
+    public int ExploredNodesCount { get => exploredNodesCount; set => exploredNodesCount = value; }
 
     private void Awake()
     {
@@ -52,11 +55,18 @@ public class GameManager : MonoBehaviour
 
     void CheckDefeat()
     {
-        if (player.Oxygen <= 0 || player.Health <= 0) SceneManager.LoadScene(TagManager.GAME_OVER_SCENE);
+        if (player.Oxygen <= 0 || player.Health <= 0) CheckForCollisionWithFinalNode();
     }
 
     void HandleOutcomesCardsSorting()
     {
-        if (battleOutcomesController != null && battleOutcomesController.BattleOutcomesList.Count == 0) battleOutcomesController.SortBattleCards();
+        if (battleOutcomesController && battleOutcomesController.BattleOutcomesList.Count == 0) battleOutcomesController.SortBattleCards();
     }
+
+    void CheckForCollisionWithFinalNode()
+    {
+        if(!isWinUnderCriticalConditions)
+            SceneManager.LoadScene(TagManager.GAME_OVER_SCENE);
+    }
+
 }

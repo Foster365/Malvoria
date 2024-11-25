@@ -14,7 +14,8 @@ public class Player : MonoBehaviour
 
     [Header("Player stats")]
     [SerializeField] int maxHealth, maxOxygen;
-    int health, oxygen;
+    [SerializeField] int health;
+    [SerializeField] int oxygen;
 
     Animator anim;
 

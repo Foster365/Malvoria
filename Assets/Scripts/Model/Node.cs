@@ -22,7 +22,8 @@ public class Node : MonoBehaviour
     {
         if (collision.gameObject.tag == TagManager.PLAYER_TAG)
         {
-
+            GameManager.Instance.ExploredNodesCount++;
+            if (gameObject.tag == TagManager.FINAL_NODE_TAG) GameManager.Instance.IsWinUnderCriticalConditions = true;
             isVisited = true; 
             anim.enabled = false;
             GameManager.Instance.Player.IsMoving = false;
@@ -35,7 +36,7 @@ public class Node : MonoBehaviour
 
     void HandleOxygenDecrease(Player player)
     {
-        if(gameObject.tag != TagManager.PLAYER_INTRODUCTION_NODE_TAG)   player.Oxygen--;
+        if(gameObject.tag != TagManager.PLAYER_INTRODUCTION_NODE_TAG) player.Oxygen--;
     }
 
 }
