@@ -13,8 +13,8 @@ public class PlayerFinalStatsUIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        oxygenLevel.text = GameManager.Instance.Player.Oxygen.ToString();
-        oxygenLevel.text = GameManager.Instance.Player.Oxygen.ToString();
+        oxygenLevel.text = $"{GameManager.Instance.Player.Oxygen.ToString()}%";
+        healthLevel.text = GameManager.Instance.Player.Health.ToString();
         totalSuccessCount.text = GameManager.Instance.TotalSuccessCount.ToString();
         partialSuccessCount.text = GameManager.Instance.PartialSuccessCount.ToString();
         failureCount.text = GameManager.Instance.FailureCount.ToString();
