@@ -309,13 +309,13 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 49cbd4c67a0f5f14ba7a90d497c19c5f, type: 3}
   sfxSounds:
   - name: Button_Hover
-    audioClip: {fileID: 8300000, guid: 905d04cf0e2f345458dc291879ceb1e3, type: 3}
+    audioClip: {fileID: 8300000, guid: 91ada667d3f2bb94e99e698192ba738d, type: 3}
   - name: Button_Click
     audioClip: {fileID: 8300000, guid: e520bb34a8fbefc4baa47f67a80a3cbe, type: 3}
   - name: Event_Started
     audioClip: {fileID: 8300000, guid: 7809585dc722e9648a09cd64171932db, type: 3}
   - name: Event_Completed
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 5755e932ed17b2942a6de6f1bf2eba8b, type: 3}
   musicSource: {fileID: 551768811}
   sfxSource: {fileID: 1478227409}
 --- !u!1 &510377320

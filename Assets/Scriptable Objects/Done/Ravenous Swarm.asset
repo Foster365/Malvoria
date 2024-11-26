@@ -19,7 +19,7 @@ MonoBehaviour:
     el interior de sus presas. Sus largos cuerpos segmentados como los de un ciempi\xE9s
     har\xEDa parecer que es imposible que una cosa as\xED pueda volar, pero el constante
     zumbido de sus gigantescas alas demuestran lo contrario."
-  cardImage: {fileID: 21300000, guid: f2385a963461d5848bc1b431897adcce, type: 3}
+  cardImage: {fileID: 21300000, guid: 5608dc8e54fb19a41b817343a447cf3d, type: 3}
   totalSuccessText: "Despistas y huyes del enjambre con gran rapidez, haciendo que
     uno de ellos se estrelle contra una roca. Rescatas de entre sus restos parte
     de su caparaz\xF3n para improvisar una armadura cubriendo tu pecho"

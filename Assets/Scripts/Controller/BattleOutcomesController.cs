@@ -54,7 +54,21 @@ public class BattleOutcomesController : MonoBehaviour
     }
     public void HandleCardEvent(GameObject eventCard)
     {
-        if (eventCard) eventCard.SetActive(true);
+        if (eventCard)
+        {
+            eventCard.SetActive(true);
+            EventStartedSound();
+        }
+    }
+
+    public void EventStartedSound()
+    {
+        if (AudioManager.instance && AudioManager.instance.GetSFX("Event_Started")) AudioManager.instance.PlaySFX("Event_Started");
+    }
+
+    public void EventCompletedSound()
+    {
+        if (AudioManager.instance && AudioManager.instance.GetSFX("Event_Completed")) AudioManager.instance.PlaySFX("Event_Completed");
     }
 
     public void HandleDecisionModifiers(int oxygenModifier, int healthModifier, int totalSuccessModifier, int partialSuccessModifier, int failureModifier)
@@ -62,11 +76,27 @@ public class BattleOutcomesController : MonoBehaviour
         playerReference.Oxygen+=oxygenModifier;
         playerReference.Health+=healthModifier;
         if (GameManager.Instance.TotalSuccessCount > 0)
+        {
             GameManager.Instance.TotalSuccessCount += totalSuccessModifier;
+            ModifyBattleOutcomesListValue("Total_Success", totalSuccessModifier);
+        }
         if (GameManager.Instance.PartialSuccessCount > 0)
+        {
             GameManager.Instance.PartialSuccessCount += partialSuccessModifier;
+            ModifyBattleOutcomesListValue("Partial_Success", partialSuccessModifier);
+        }
         if (GameManager.Instance.FailureCount > 0)
+        {
             GameManager.Instance.FailureCount += failureModifier;
+            ModifyBattleOutcomesListValue("Failure", failureModifier);
+        }
+    }
+
+    void ModifyBattleOutcomesListValue(string valueType, int value)
+    {
+        if (value == 0) return;
+        if (value > 0) battleOutcomesList.Add(valueType);
+        else battleOutcomesList.Remove(valueType);
     }
 
     void ValueModifierHandler(int value, int modifier)

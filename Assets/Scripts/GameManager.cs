@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public class KeyValuePair
 {
-    public GameObject key; public int value;
+    public string key; public GameObject value;
 }
 
 public class GameManager : MonoBehaviour
@@ -17,8 +17,10 @@ public class GameManager : MonoBehaviour
     int totalSuccessCount, partialSuccessCount, failureCount;
     BattleOutcomesController battleOutcomesController;
     int exploredNodesCount;
-    [SerializeField] List<KeyValuePair> keyValuePairs = new List<KeyValuePair>();
 
+    [SerializeField] List<KeyValuePair> eventCardKeyValuePairs = new List<KeyValuePair>();
+    Dictionary<string, GameObject> eventCardDictionary = new Dictionary<string, GameObject>();
+     
     public static GameManager Instance
     {
         get
@@ -44,10 +46,9 @@ public class GameManager : MonoBehaviour
 
     private void OnValidate()
     {
-        Dictionary<GameObject, int> dict = new Dictionary<GameObject, int>();
-        foreach (var kvp in keyValuePairs)
+        foreach (var kvp in eventCardKeyValuePairs)
         {
-            dict[kvp.key] = kvp.value;
+            eventCardDictionary[kvp.key] = kvp.value;
         }
     }
 
@@ -61,6 +62,7 @@ public class GameManager : MonoBehaviour
     {
         CheckWin();
         CheckDefeat();
+        Debug.Log("Outcomes count: " + battleOutcomesController.BattleOutcomesList.Count);
         HandleOutcomesCardsSorting();
     }
 
@@ -76,7 +78,7 @@ public class GameManager : MonoBehaviour
 
     void HandleOutcomesCardsSorting()
     {
-        if (battleOutcomesController && battleOutcomesController.BattleOutcomesList.Count == 0) battleOutcomesController.SortBattleCards();
+        if (battleOutcomesController && battleOutcomesController.BattleOutcomesList.Count <= 0) battleOutcomesController.SortBattleCards();
     }
 
     void CheckForCollisionWithFinalNode()

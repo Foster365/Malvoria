@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class EndGameSelectionButton : MonoBehaviour
 {
+
+    BattleOutcomesController battleOutcomesController;
+
+    private void Awake()
+    {
+        battleOutcomesController = GameObject.FindWithTag("Battle_Outcomes_Controller").GetComponent<BattleOutcomesController>();
+    }
+
     public void SetWinLevelBoolean()
     {
         GameManager.Instance.IsWin = true;
+        battleOutcomesController.EventCompletedSound();
     }
 
     public void HoverSound()

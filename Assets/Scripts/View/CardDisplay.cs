@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class CardDisplay : MonoBehaviour
 {
 
+    BattleOutcomesController battleOutcomesController;
+
     [SerializeField] EventCard evCard;
 
     [SerializeField] TextMeshProUGUI cardTitle;
@@ -14,9 +16,16 @@ public class CardDisplay : MonoBehaviour
     [SerializeField] Image cardImage;
     [SerializeField] TextMeshProUGUI totalSuccessText, partialSuccessText, failureText;
     [SerializeField] TextMeshProUGUI totalSuccessOutcomeText, partialSuccessOutcomeText, failureOutcomeText;
+
+    private void Awake()
+    {
+        battleOutcomesController = GameObject.FindWithTag("Battle_Outcomes_Controller").GetComponent<BattleOutcomesController>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        if(battleOutcomesController)battleOutcomesController.EventStartedSound();
         cardTitle.text = evCard.CardTitle.ToString();
         cardDescryption.text = evCard.CardDescryption.ToString();
         cardImage.sprite = evCard.CardImage;
