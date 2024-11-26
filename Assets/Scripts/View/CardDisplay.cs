@@ -11,7 +11,7 @@ public class CardDisplay : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI cardTitle;
     [SerializeField] TextMeshProUGUI cardDescryption;
-    [SerializeField] Sprite cardImage;
+    [SerializeField] Image cardImage;
     [SerializeField] TextMeshProUGUI totalSuccessText, partialSuccessText, failureText;
     [SerializeField] TextMeshProUGUI totalSuccessOutcomeText, partialSuccessOutcomeText, failureOutcomeText;
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class CardDisplay : MonoBehaviour
     {
         cardTitle.text = evCard.CardTitle.ToString();
         cardDescryption.text = evCard.CardDescryption.ToString();
-        cardImage = evCard.CardImage;
+        cardImage.sprite = evCard.CardImage;
         totalSuccessText.text = evCard.TotalSuccessText;
         partialSuccessText.text = evCard.PartialSuccessText;
         failureText.text = evCard.FailureText;

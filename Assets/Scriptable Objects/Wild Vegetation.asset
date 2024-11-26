@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5c629b775e0ee49a8da34a0c8b873b, type: 3}
+  m_Name: Wild Vegetation
+  m_EditorClassIdentifier: 
+  cardTitle: "Vegetaci\xF3n Salvaje"
+  cardDescryption: Las plantas de este planeta no parecen tan distintas a las que
+    conoces. Tal vez puedas forrajear algunos materiales para recomponerte y continuar
+    tu camino.
+  cardImage: {fileID: 21300000, guid: ecd1cac7aab90fc408af9f1b609070e1, type: 3}
+  totalSuccessText: " Improvisas unos parches y torniquetes para reparar el da\xF1o
+    de tu traje."
+  partialSuccessText: "Alcanzas a recolectar lo justo y necesario para reparar los
+    da\xF1os m\xE1s cr\xEDticos de tu traje."
+  failureText: "Las savia de las plantas que encuentras parecen reaccionar de forma
+    negativa con el tejido de tu traje. Esperas que el da\xF1o no sea demasiado grave."
+  totalSuccessOutcomeText: +4 HP
+  partialSuccessOutcomeText: +2 HP
+  failureOutcomeText: -2 HP

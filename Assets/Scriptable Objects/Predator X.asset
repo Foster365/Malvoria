@@ -17,7 +17,7 @@ MonoBehaviour:
     en este extra\xF1o mundo. Crees que podr\xEDas encontrar provisiones o alguna
     forma de comunicarte, pero parece que algo m\xE1s ha encontrado este lugar primero,
     y ahora sabe de tu presencia."
-  cardImage: {fileID: 21300000, guid: 26d6d4b256b1c6a4db740d0993e940f8, type: 3}
+  cardImage: {fileID: 21300000, guid: 511f66bd7bcf0e74da50ab77c7f42b7a, type: 3}
   totalSuccessText: "Aprovechando un momento de vulnerabilidad de la criatura le
     asestas un golpe decisivo que la hace huir. Est\xE1s a salvo. Por ahora."
   partialSuccessText: Los embates de la criatura son incansables, ruegas por encontrar

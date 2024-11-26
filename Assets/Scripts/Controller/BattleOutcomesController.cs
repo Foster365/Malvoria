@@ -9,7 +9,6 @@ public class BattleOutcomesController : MonoBehaviour
 {
 
     [SerializeField] TextMeshProUGUI totalSuccessCountImage, partialSuccessCountImage, failureCountImage;
-    int totalSuccessCount, partialSuccessCount, failureCount;
 
     Player playerReference;
 
@@ -62,11 +61,12 @@ public class BattleOutcomesController : MonoBehaviour
     {
         playerReference.Oxygen+=oxygenModifier;
         playerReference.Health+=healthModifier;
-        if (GameManager.Instance.TotalSuccessCount > 0) totalSuccessCount += totalSuccessModifier;
-        if (GameManager.Instance.PartialSuccessCount > 0) partialSuccessCount += partialSuccessModifier;
-        if (GameManager.Instance.FailureCount > 0) failureCount += failureModifier;
-
-        Debug.Log("Total success count: " + GameManager.Instance.TotalSuccessCount);
+        if (GameManager.Instance.TotalSuccessCount > 0)
+            GameManager.Instance.TotalSuccessCount += totalSuccessModifier;
+        if (GameManager.Instance.PartialSuccessCount > 0)
+            GameManager.Instance.PartialSuccessCount += partialSuccessModifier;
+        if (GameManager.Instance.FailureCount > 0)
+            GameManager.Instance.FailureCount += failureModifier;
     }
 
     void ValueModifierHandler(int value, int modifier)

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5c629b775e0ee49a8da34a0c8b873b, type: 3}
+  m_Name: Wild River
+  m_EditorClassIdentifier: 
+  cardTitle: "R\xEDo Salvaje"
+  cardDescryption: "Las aguas aceitosas braman constantemente, el rugido de la corriente
+    augura peligro, pero no hay otra forma de sortearlo m\xE1s que cruz\xE1ndolo.
+    Tal vez puedas intentar saltar hacia el otro lado."
+  cardImage: {fileID: 21300000, guid: e06eb58921dabb04d859f4409ddf8982, type: 3}
+  totalSuccessText: Entre las aguas logras ubicar unas salientes rocosas que te sirven
+    de plataforma para cruzar al otro lado.
+  partialSuccessText: "Intentas cruzar de un envi\xF3n pero caes al agua qued\xE1ndote
+    sujeto a la orilla. Apenas puedes aguantar la fuerza del r\xEDo intentando arrastrarte."
+  failureText: " Mientras exploras la orilla para buscar como cruzar, el suelo de
+    la orilla cede. El r\xEDo te arrastra bajo sus aguas turbulentas."
+  totalSuccessOutcomeText: '-'
+  partialSuccessOutcomeText: -3 HP
+  failureOutcomeText: "-5 HP; -5 Ox\xEDgeno"

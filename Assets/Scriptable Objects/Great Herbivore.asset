@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5c629b775e0ee49a8da34a0c8b873b, type: 3}
+  m_Name: Great Herbivore
+  m_EditorClassIdentifier: 
+  cardTitle: "Gran Herb\xEDvoro"
+  cardDescryption: "Oyes un ruido entre la extra\xF1a vegetaci\xF3n. Cuando te aproximas,
+    una criatura que dobla tu tama\xF1o gira su cabeza y fija sus ojos sobre ti,
+    estudiando cada uno de tus movimientos."
+  cardImage: {fileID: 21300000, guid: 8ee8825bcd70d654fa29f2b906ba0b69, type: 3}
+  totalSuccessText: " Mantienes una distancia prudente, pero el animal resulta amigable,
+    gui\xE1ndote por los senderos naturales que su especie conoce, acortando la ruta
+    de tu traves\xEDa."
+  partialSuccessText: "El animal parece tenso ante tu presencia, encar\xE1ndote cuando
+    intentas cruzar. Esto retrasa tu expedici\xF3n en lo que intentas ser lo m\xE1s
+    extremadamente precavido con tus movimientos."
+  failureText: " Parece que haz cruzado dentro de su territorio, y no te lo dejar\xE1
+    pasar con facilidad. El animal arremete agresivamente intentando defender su
+    territorio, llev\xE1ndote a una agotadora persecuci\xF3n por tu vida."
+  totalSuccessOutcomeText: "+2 Ox\xEDgeno"
+  partialSuccessOutcomeText: "-2 Ox\xEDgeno"
+  failureOutcomeText: "-3 HP; -5 Ox\xEDgeno"
