@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5c629b775e0ee49a8da34a0c8b873b, type: 3}
+  m_Name: Crimson Swamp
+  m_EditorClassIdentifier: 
+  cardTitle: "Ci\xE9naga Carmes\xED"
+  cardDescryption: "Entre los humedales se forman vetas de terreno que parecen m\xE1s
+    transitables. Las mera vista de las aguas del color de la sangre te producen
+    una sensaci\xF3n de mal presagio."
+  cardImage: {fileID: 21300000, guid: f2385a963461d5848bc1b431897adcce, type: 3}
+  totalSuccessText: Avanzas tanteando el suelo con mucho cuidado, haciendo progreso
+    poco a poco. Te toma un largo tiempo, pero logras cruzar el resbaloso terreno
+    sin mayores contratiempos.
+  partialSuccessText: ' El fangoso suelo es tedioso de transitar, las aguas le dan
+    una consistencia extremadamente espesa y en ocasiones te llega hasta las rodillas.
+    El cansancio es agobiante.'
+  failureText: "El suelo cede bajo tus pies, volc\xE1ndote hacia las aguas. Sientes
+    algo aferrarse a tus piernas impidi\xE9ndote levantarte. El p\xE1nico se apodera
+    de tu cuerpo hasta que de un feroz tir\xF3n logras zafarte de lo que sea que
+    estuviera all\xED abajo."
+  totalSuccessOutcomeText: "-2 Ox\xEDgeno"
+  partialSuccessOutcomeText: "-5 Ox\xEDgeno; -1 HP"
+  failureOutcomeText: "-10 ox\xEDgeno"

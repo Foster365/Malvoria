@@ -30,12 +30,12 @@ public class BattleOutcomesController : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Total Success Count UI: " +  totalSuccessCountImage.text);
-        Debug.Log("Partial Success Count UI: " +  partialSuccessCountImage.text);
-        Debug.Log("Failure Count UI: " +  failureCountImage.text);
         totalSuccessCountImage.text = GameManager.Instance.TotalSuccessCount.ToString();
         partialSuccessCountImage.text = GameManager.Instance.PartialSuccessCount.ToString();
         failureCountImage.text = GameManager.Instance.FailureCount.ToString();
+        if (GameManager.Instance.TotalSuccessCount < 0) GameManager.Instance.TotalSuccessCount = 0;
+        if (GameManager.Instance.PartialSuccessCount < 0) GameManager.Instance.PartialSuccessCount = 0;
+        if (GameManager.Instance.FailureCount < 0) GameManager.Instance.FailureCount = 0;
     }
     public void SortBattleCards()
     {

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5c629b775e0ee49a8da34a0c8b873b, type: 3}
+  m_Name: Obsidian Needles
+  m_EditorClassIdentifier: 
+  cardTitle: Agujas de obsidiana
+  cardDescryption: "Gigantescas formaciones de roca \xEDgnea, tan altas como un cohete,
+    se elevan hacia el cielo. Su superficie irregular distorsiona tu reflejo como
+    un espejo negruzco. Por alg\xFAn motivo, el reflejo de tu rostro es irreconocible."
+  cardImage: {fileID: 21300000, guid: 81969fa49a6704341b206fc8224dabc8, type: 3}
+  totalSuccessText: "Un extra\xF1o viento ulula entre las gigantescas formaciones
+    vidriosas. Tu reflejo se distorsiona como si alg\xFAn tipo de l\xEDquido fluyera
+    dentro de las agujas elucubrando patrones hipn\xF3ticos."
+  partialSuccessText: "El bosque es interminable y las extra\xF1as figuras que se
+    reflejan en la superficie de las agujas no se asemejan en nada a tu apariencia.
+    Temes que no est\xE9s tan solo como cre\xEDas."
+  failureText: "El suelo tiembla en un momento inoportuno haciendo que el se resquebraje.
+    Una de las gigantescas agujas se desploma, haci\xE9ndose a\xF1icos en el acto,
+    lanzando esquirlas por todas partes."
+  totalSuccessOutcomeText: "-2 Ox\xEDgeno"
+  partialSuccessOutcomeText: "-5 Ox\xEDgeno"
+  failureOutcomeText: "-5 HP -5 Ox\xEDgeno"

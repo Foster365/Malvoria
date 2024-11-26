@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5c629b775e0ee49a8da34a0c8b873b, type: 3}
+  m_Name: Spectral Sheet
+  m_EditorClassIdentifier: 
+  cardTitle: Manta Espectral
+  cardDescryption: "Su cuerpo oscuro y salpicado por las estrellas est\xE1 cubierto
+    por docenas de ojos diminutos, y todos apuntan contra ti. Su figura se desdibuja
+    en el aire hasta camuflarse perfectamente con la periferia de tu visi\xF3n."
+  cardImage: {fileID: 21300000, guid: 06b07f1838cc3444483d6de50a17ca60, type: 3}
+  totalSuccessText: "La criatura te teme m\xE1s a ti que t\xFA a ella, su accionar
+    es el de un animal disfraz\xE1ndose para evitar el peligro. Luego de un rato
+    te das cuenta que no queda rastro de su presencia."
+  partialSuccessText: Logras distinguir su presencia saliendo de su camuflaje. Una
+    breve lucha toma lugar, cuando un certero golpe en su vientre la hace huir a
+    toda prisa.
+  failureText: "Te toma por sorpresa asalt\xE1ndote desde un \xE1ngulo ciego. Tras
+    una extensa lucha repeles su ataque y en un momento de confusi\xF3n huyes despavorido."
+  totalSuccessOutcomeText: '-'
+  partialSuccessOutcomeText: -2 HP
+  failureOutcomeText: "-2 HP; Descarta un \xE9xito"

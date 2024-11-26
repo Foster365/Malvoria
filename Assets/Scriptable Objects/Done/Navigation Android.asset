@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5c629b775e0ee49a8da34a0c8b873b, type: 3}
+  m_Name: Navigation Android
+  m_EditorClassIdentifier: 
+  cardTitle: "Androide de navegaci\xF3n"
+  cardDescryption: Te encuentras con los restos quebrados de un androide que parece
+    haber sobrevivido al choque, aunque en muy mal estado y no parece quedarle mucho
+    tiempo. Tal vez puedas convencerle de que te ayude a encontrar el camino.
+  cardImage: {fileID: 21300000, guid: 987f96ed31d421443bceb55dbdc7a7a9, type: 3}
+  totalSuccessText: "En sus \xFAltimos momentos, antes de agotar su reserva de bater\xEDa,
+    el androide te transmite que ha logrado localizar un punto de inter\xE9s cercano."
+  partialSuccessText: " Luego de una extensa discusi\xF3n rogando que te ayude a
+    pesar de ser un fugitivo, se resigna a su suerte y decide ayudarte, indic\xE1ndote
+    una posible ruta para que tengas una chance de sobrevivir."
+  failureText: "A pesar de tus mejores esfuerzos por convencerle, te sigue considerando
+    un prisionero y se niega a ayudarte. Haciendo un \xFAltimo intento por atraer
+    la ayuda de un oficial a cargo, hace sonar una alarma que dura hasta que se queda
+    sin bater\xEDa."
+  totalSuccessOutcomeText: "+3 Ox\xEDgeno"
+  partialSuccessOutcomeText: '-'
+  failureOutcomeText: '-'

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5c629b775e0ee49a8da34a0c8b873b, type: 3}
+  m_Name: Iridescent Rock
+  m_EditorClassIdentifier: 
+  cardTitle: Roca Iridescente
+  cardDescryption: En un foso descubres una roca de superficie lisa y aspecto perlado,
+    su superficie descompone la luz en miles de colores cambiantes.
+  cardImage: {fileID: 21300000, guid: 6a080704d34406d44b92a72b2656214e, type: 3}
+  totalSuccessText: "Su luz te provee de una extra\xF1a calma y sensaci\xF3n de seguridad,
+    sientes un calor reconfortante dentro de ti. Te resulta dif\xEDcil, pero partes
+    de su lado con una renovada sensaci\xF3n de fortaleza."
+  partialSuccessText: "Su presencia te produce tranquilidad, tomas un momento para
+    recuperarte a su lado, y contin\xFAas tu camino."
+  failureText: "La roca te produce una sensaci\xF3n de paz y tranquilidad, pasas
+    el rato junto a ella. Cuando te das cuenta ha pasado mucho m\xE1s tiempo del
+    que cre\xEDas. Partes de su lado temiendo que hayas desperdiciando demasiado
+    tiempo"
+  totalSuccessOutcomeText: "+2 \xC9xito Total"
+  partialSuccessOutcomeText: "+2 \xC9xito"
+  failureOutcomeText: "-5 Ox\xEDgeno"

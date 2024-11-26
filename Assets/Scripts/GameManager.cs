@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[System.Serializable]
+public class KeyValuePair
+{
+    public GameObject key; public int value;
+}
+
 public class GameManager : MonoBehaviour
 {
     static GameManager instance;
@@ -11,6 +17,7 @@ public class GameManager : MonoBehaviour
     int totalSuccessCount, partialSuccessCount, failureCount;
     BattleOutcomesController battleOutcomesController;
     int exploredNodesCount;
+    [SerializeField] List<KeyValuePair> keyValuePairs = new List<KeyValuePair>();
 
     public static GameManager Instance
     {
@@ -33,6 +40,15 @@ public class GameManager : MonoBehaviour
     {
         if (instance != null) Destroy(this);
         else instance = this;
+    }
+
+    private void OnValidate()
+    {
+        Dictionary<GameObject, int> dict = new Dictionary<GameObject, int>();
+        foreach (var kvp in keyValuePairs)
+        {
+            dict[kvp.key] = kvp.value;
+        }
     }
 
     private void Start()

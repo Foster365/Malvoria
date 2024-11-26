@@ -17,7 +17,7 @@ MonoBehaviour:
     conoces. Tal vez puedas forrajear algunos materiales para recomponerte y continuar
     tu camino.
   cardImage: {fileID: 21300000, guid: ecd1cac7aab90fc408af9f1b609070e1, type: 3}
-  totalSuccessText: " Improvisas unos parches y torniquetes para reparar el da\xF1o
+  totalSuccessText: "Improvisas unos parches y torniquetes para reparar el da\xF1o
     de tu traje."
   partialSuccessText: "Alcanzas a recolectar lo justo y necesario para reparar los
     da\xF1os m\xE1s cr\xEDticos de tu traje."

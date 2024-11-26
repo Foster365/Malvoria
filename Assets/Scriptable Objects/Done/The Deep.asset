@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5c629b775e0ee49a8da34a0c8b873b, type: 3}
+  m_Name: The Deep
+  m_EditorClassIdentifier: 
+  cardTitle: Las Profundidades
+  cardDescryption: "En las profundidades de la cueva, una ruta te lleva hasta una
+    rec\xE1mara repleta de cristales luminosos. Sientes un sonido en tu cabeza, tal
+    vez una voz, indistinguible, pero persistente."
+  cardImage: {fileID: 21300000, guid: 333beca85f0e20e4599f4adaa61648f9, type: 3}
+  totalSuccessText: No percibes que la voz tenga malas intenciones, interpretas las
+    voces como algo que busca alentarte. Esa idea, sumada a la espectacular vista,
+    te inspiran a salir adelante.
+  partialSuccessText: "Encontrar tal extra\xF1a belleza en este lugar ayuda a recuperar
+    un poco la esperanza. Hasta el sonido en tu cabeza se siente reconfortante. Sigues
+    tu camino con una renovada sensaci\xF3n de esperanza."
+  failureText: "La agradable vista es una agradable sorpresa, aunque encuentras el
+    sonido en tu cabeza algo molesta. Contin\xFAas tu viaje apreciando el momento
+    de tranquilidad en este inh\xF3spito mundo."
+  totalSuccessOutcomeText: "+3 \xC9xito Total; +1 \xC9xito"
+  partialSuccessOutcomeText: "+1 \xC9xito Total; +2 \xC9xito"
+  failureOutcomeText: "-1 Fallo; +1 \xC9xito"

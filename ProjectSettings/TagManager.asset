@@ -12,6 +12,7 @@ TagManager:
   - Battle_Outcomes_Controller
   - Final_Node
   - Player_Introduction_Node
+  - Event_Card
   layers:
   - Default
   - TransparentFX

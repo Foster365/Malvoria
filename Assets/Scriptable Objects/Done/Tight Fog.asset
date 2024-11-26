@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5c629b775e0ee49a8da34a0c8b873b, type: 3}
+  m_Name: Tight Fog
+  m_EditorClassIdentifier: 
+  cardTitle: Niebla Estanca
+  cardDescryption: Una planicie de arcilla oscura como la noche se abre frente a
+    ti. Sobre su superficie se cierne una extensa niebla muy espesa que te llega
+    hasta el cuello.
+  cardImage: {fileID: 21300000, guid: 9bf1530660ce86a4daa824a410664b14, type: 3}
+  totalSuccessText: "Las condiciones atmosf\xE9ricas te favorecen. La niebla se disuelve
+    en gran parte, permiti\xE9ndote ver por donde vas y evitar tropezar por el camino"
+  partialSuccessText: "La alta concentraci\xF3n de humedad hace a la arcilla fangosa
+    y dif\xEDcil de cruzar. Avanzas con mucha cautela, aunque te toma m\xE1s tiempo
+    del que desear\xEDas."
+  failureText: "La presi\xF3n atmosf\xE9rica disminuye, haciendo que la niebla se
+    eleve por encima de tu cabeza. Avanzas con cautela hasta llegar al final, cuando
+    descubres que te has desviado bastante de tu curso."
+  totalSuccessOutcomeText: '-'
+  partialSuccessOutcomeText: "-3 Ox\xEDgeno"
+  failureOutcomeText: -5 Oxigeno

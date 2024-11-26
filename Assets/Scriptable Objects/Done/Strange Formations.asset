@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5c629b775e0ee49a8da34a0c8b873b, type: 3}
+  m_Name: Strange Formations
+  m_EditorClassIdentifier: 
+  cardTitle: "Formaciones Extra\xF1as"
+  cardDescryption: Formaciones retorcidas de roca se elevan hacia el cielo. Su forma
+    es demasiado compleja pero resulta imposible distinguir si realmente son naturales
+    o fueron creadas por alguna criatura inteligente.
+  cardImage: {fileID: 21300000, guid: 5609779e75af3a346a3aca2882d1bb8b, type: 3}
+  totalSuccessText: "Tal vez es una forma de arte. Si hay vida inteligente en este
+    planeta, tal vez no todo est\xE1 perdido. Te sientes esperanzado. "
+  partialSuccessText: "Las figuras te dan mal augurio, algo en su apuntalada forma
+    te transmiten la sensaci\xF3n de peligro. Apresuras el paso para poner la mayor
+    distancia posible."
+  failureText: "Te quedas a estudiar las figuras, tratando de descubrir sus secretos,
+    esperando descifrar su origen y prop\xF3sito. Luego de un rato, sin haberlo logrado,
+    contin\xFAas tu camino."
+  totalSuccessOutcomeText: +3 HP
+  partialSuccessOutcomeText: "+4 Ox\xEDgeno"
+  failureOutcomeText: "-3 Ox\xEDgeno"

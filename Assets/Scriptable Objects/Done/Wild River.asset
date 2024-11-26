@@ -21,7 +21,7 @@ MonoBehaviour:
     de plataforma para cruzar al otro lado.
   partialSuccessText: "Intentas cruzar de un envi\xF3n pero caes al agua qued\xE1ndote
     sujeto a la orilla. Apenas puedes aguantar la fuerza del r\xEDo intentando arrastrarte."
-  failureText: " Mientras exploras la orilla para buscar como cruzar, el suelo de
+  failureText: "Mientras exploras la orilla para buscar como cruzar, el suelo de
     la orilla cede. El r\xEDo te arrastra bajo sus aguas turbulentas."
   totalSuccessOutcomeText: '-'
   partialSuccessOutcomeText: -3 HP

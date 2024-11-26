@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5c629b775e0ee49a8da34a0c8b873b, type: 3}
+  m_Name: Mortal Roots
+  m_EditorClassIdentifier: 
+  cardTitle: "Ra\xEDces Mortales"
+  cardDescryption: "Las ra\xEDces del bosque maldito envuelven tu cuerpo y te tienen
+    como su presa. Este podr\xEDa ser el final."
+  cardImage: {fileID: 21300000, guid: acd0444aaf287084598c81c56893af08, type: 3}
+  totalSuccessText: "En el \xFAltimo la luz del sol penetra las espesas capas de
+    follaje del bosque maldito. Esto parece paralizar las ra\xEDces lo suficiente
+    para permitirte soltarte y huir."
+  partialSuccessText: "Trastabillas y escapas al agarre mortal, sin embargo est\xE1s
+    lejos de huir del peligro."
+  failureText: "Las ra\xEDces te tironean por todas partes, y sientes que est\xE1n
+    por hacerte pedazos, solo un milagro podr\xEDa salvarte ahora."
+  totalSuccessOutcomeText: -3 HP
+  partialSuccessOutcomeText: -2 HP
+  failureOutcomeText: -10 HP

@@ -19,6 +19,7 @@ public class TagManager : MonoBehaviour
 
     #region Tags
 
+    public const string EVENT_CARD_TAG = "Event_Card";
     public const string PLAYER_TAG = "Player";
     public const string FINAL_NODE_TAG = "Final_Node";
     public const string OXYGEN_LEVEL_UI_TAG = "Oxygen_Level_UI";
